@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'windows_font';
+    src: url('./assets/fonts/Windows_Regular.ttf') format('opentype');
+}
+
+* {
+  font-family: 'windows_font';
+}
+
+:root {
+  background-color: #008080;
+  width: 100vw;
+}
+
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  max-height: 100% !important;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
