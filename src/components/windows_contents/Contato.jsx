@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import '../Components.css'
 import { ButtonWin } from '../ButtonWin'
-import { contato } from '../../../public/assets/texts/contato/contato'
-
-import world_computer from './assets/gifs/world_computer.gif'
+import { contato } from '../../../assets/texts/contato/contato'
 
 import world_computer from '../../../assets/gifs/world_computer.gif'
 

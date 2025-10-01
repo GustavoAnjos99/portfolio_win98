@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import '../Components.css'
 
-import { skills } from '../../../public/assets/texts/skills/skills'
+import { skills } from '../../../assets/texts/skills/skills'
 
 export const DivImagens = (props) => {
     return (
