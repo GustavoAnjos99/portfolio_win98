@@ -4,6 +4,7 @@ import '../Components.css'
 import { colors } from '../../constants/Colors'
 import { projetos } from '../../../assets/texts/projetos/projetos'
 import { ButtonWin } from '../ButtonWin'
+import folder from '../../../assets/gifs/folder.gif'
 
 export const PageProjeto = (props) => {
     const [imgok, setImgOk] = useState(true)
@@ -15,8 +16,8 @@ export const PageProjeto = (props) => {
             <p style={{ textAlign: 'justify' }}>{props.data.texto}</p>
             <p><a href={props.data.links[0]}>Github</a> | <a href={props.data.links[1]}>Projeto</a></p>
             <div style={{display: 'flex', gap: '50%', justifyContent: 'center'}}>
-                  <img src='../../assets/gifs/folder.gif' style={{ width: '5vw', height: '5vw' }} />
-                  <img src='../../assets/gifs/folder.gif' style={{ width: '5vw', height: '5vw' }} />
+                  <img src={folder} style={{ width: '5vw', height: '5vw' }} />
+                  <img src={folder} style={{ width: '5vw', height: '5vw' }} />
             </div>
         </>
     )
