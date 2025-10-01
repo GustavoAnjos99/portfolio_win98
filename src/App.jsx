@@ -52,10 +52,12 @@ function App() {
       <Topbar title="Gustavo dos Anjos" home />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "5vw" }}>
         <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
+        <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
         <div>
           <Title text={"GUSTAVO DOS ANJOS"} />
           <Title text={"DEV FULLSTACK"} italic />
         </div>
+        <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
         <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
       </div>
       <div className='iconsContainer'>

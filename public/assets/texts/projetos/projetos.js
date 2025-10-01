@@ -1,4 +1,4 @@
-const imgPath = "../../assets/img/"
+const imgPath = "/assets/img/"
 function returnPathImg(projeto) {
     return imgPath + projeto + ".png"
 }
