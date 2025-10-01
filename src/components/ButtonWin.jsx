@@ -3,7 +3,11 @@ import { colors } from '../constants/Colors'
 import './Components.css'
 
 export const ButtonWin = (props) => {
+  const handleClick = (e) => {
+    e.stopPropagation()
+    if (props.function) props.function(e)
+  }
   return (
-    <button onClick={props.function} className='buttonWinContainer'>{props.title}</button>
+    <button onClick={handleClick} onTouchEnd={handleClick} className={`${props.contato ? 'buttonWinContainerContato' : 'buttonWinContainer'}`}>{props.title}</button>
   )
 }

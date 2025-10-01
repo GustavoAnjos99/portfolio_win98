@@ -7,7 +7,7 @@ export const Window = (props) => {
     const nodeRef = useRef(null)
     
     return (
-        <Draggable cancel='section' nodeRef={nodeRef} bounds='body' defaultPosition={{x:250, y:-650}}>
+        <Draggable cancel='.no-drag, section' nodeRef={nodeRef} bounds='body' defaultPosition={{x: window.innerWidth < 800 ? 0 : window.innerWidth / 2, y:-(window.innerHeight / 2)}}>
             <div ref={nodeRef} style={styleWindowContent}>
                 <Topbar title={props.titleWindow} openCloseFunction={props.openCloseFunction} iconTab={props.iconTab}/>
                 {props.children}

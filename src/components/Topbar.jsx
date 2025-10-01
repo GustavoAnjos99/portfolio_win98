@@ -35,6 +35,7 @@ const homeStyleHeader = {
     paddingInline: 5,
     paddingBlock: 2,
     display: 'flex',
+    alignItems: 'center',
     justifyContent: 'space-between'
 }
 

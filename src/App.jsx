@@ -8,6 +8,7 @@ import { colors } from './constants/Colors'
 import { SobreMim } from './components/windows_contents/SobreMim'
 import { MinhasSkills } from './components/windows_contents/MinhasSkills'
 import { MeusProjetos } from './components/windows_contents/MeusProjetos'
+import { Contato } from './components/windows_contents/Contato'
 
 import computer from '../assets/icons/computer.png'
 import computer_folder from '../assets/icons/computer_folder.png'
@@ -22,10 +23,10 @@ function App() {
     ["60%", "10%", "Contato", search]
   ]
 
-  const [window, setWindow] = useState({})
+  const [windows, setWindow] = useState({})
   const openCloseWindow = (title, op) => {
     if (op == "o") {
-      let verifyWindow = window
+      let verifyWindow = windows
       delete verifyWindow[title]
 
       Object.keys(verifyWindow).forEach(element => {
@@ -43,23 +44,8 @@ function App() {
       [title]: !prev[title]
     }))
   }
-  // //     if (op == "o"){
-  //       let verifyWindow = window
-  //       delete verifyWindow[title]
 
-  //       let name
-  //       Object.keys(verifyWindow).forEach(element => {
-  //         if (element) name = element
-  //         setWindow(prev => ({
-  //           ...prev,
-  //           [name]: !prev[name]
-  //         }))
-  //       })
-  //       setWindow(prev => ({
-  //         ...prev,
-  //         [title]: !prev[title]
-  //       }))
-  //     } else if (op == "c") {
+  
   return (
     <div>
       <Topbar title="Gustavo dos Anjos" home />
@@ -89,8 +75,8 @@ function App() {
       </div>
       {
         iconsData.map(element => (
-          window[element[2]] && (
-            <div style={{ minWidth: 'min-content', maxWidth: '35vw' }}>
+          windows[element[2]] && (
+            <div style={{ minWidth: 'min-content', maxWidth: window.innerWidth < 800 ? '90vw' : element[2] == 'Meus Projetos' ? '50vw' :'35vw' }}>
               <Window
                 iconTab={element[3]}
                 key={element[2]}
@@ -98,10 +84,10 @@ function App() {
                 openCloseFunction={() => openCloseWindow(element[2], "c")}
               >
                 {
-                  element[2] == "Sobre Mim" ? <SobreMim /> :
+                  element[2] == "Sobre mim" ? <SobreMim /> :
                     element[2] == "Minhas Skills" ? <MinhasSkills /> :
                       element[2] == "Meus Projetos" ? <MeusProjetos /> :
-                        <SobreMim />
+                        element[2] == "Contato" ? <Contato /> : null
                 }
               </Window>
             </div>
