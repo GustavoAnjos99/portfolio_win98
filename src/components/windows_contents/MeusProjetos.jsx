@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import '../Components.css'
 
 import { colors } from '../../constants/Colors'
-import { projetos } from './assets/texts/projetos/projetos'
+import { projetos } from '../../assets/texts/projetos/projetos'
 import { ButtonWin } from '../ButtonWin'
-import folder from '../../../assets/gifs/folder.gif'
+import folder from '../../assets/gifs/folder.gif'
 
 export const PageProjeto = (props) => {
     const [imgok, setImgOk] = useState(true)

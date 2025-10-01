@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import '../Components.css'
 import { ButtonWin } from '../ButtonWin'
-import { contato } from '../../../assets/texts/contato/contato'
+import { contato } from '../../assets/texts/contato/contato'
 
-import world_computer from '../../../assets/gifs/world_computer.gif'
+import world_computer from '../../assets/gifs/world_computer.gif'
 
 export const Contato = () => {
     const [emailCopied, setEmailCopied] = useState(false)
