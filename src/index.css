@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'windows_font';
-    src: url('./assets/fonts/Windows_Regular.ttf') format('opentype');
+    src: url('/fonts/Windows_Regular.ttf') format('opentype');
 }
 
 * {

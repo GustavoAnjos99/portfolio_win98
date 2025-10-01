@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import '../Components.css'
 import { ButtonWin } from '../ButtonWin'
-import { contato } from '../../../assets/texts/contato/contato'
+import { contato } from '../../../public/assets/texts/contato/contato'
+
+import world_computer from './assets/gifs/world_computer.gif'
 
 export const Contato = () => {
     const [emailCopied, setEmailCopied] = useState(false)
@@ -30,7 +32,7 @@ export const Contato = () => {
                     }
                 </div>
                 <div style={{padding: '10%', display: 'flex', justifyContent: 'center'}}>
-                    <img src='../../assets/gifs/world_computer.gif' style={{ width: '10vw', height: '10vw'}} />
+                    <img src={world_computer} style={{ width: '10vw', height: '10vw'}} />
                 </div>
             </div>
         </section>

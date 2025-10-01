@@ -10,10 +10,11 @@ import { MinhasSkills } from './components/windows_contents/MinhasSkills'
 import { MeusProjetos } from './components/windows_contents/MeusProjetos'
 import { Contato } from './components/windows_contents/Contato'
 
-import computer from '../assets/icons/computer.png'
-import computer_folder from '../assets/icons/computer_folder.png'
-import people from '../assets/icons/people.png'
-import search from '../assets/icons/search.png'
+import star_spinning from '../public/assets/gifs/star_spinning.gif'
+import computer from '../public/assets/icons/computer.png'
+import computer_folder from '../public/assets/icons/computer_folder.png'
+import people from '../public/assets/icons/people.png'
+import search from '../public/assets/icons/search.png'
 
 function App() {
   const iconsData = [
@@ -50,12 +51,12 @@ function App() {
     <div>
       <Topbar title="Gustavo dos Anjos" home />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "5vw" }}>
-        <img src='..\assets\gifs\star_spinning.gif' style={{ width: "5%", height: "5%" }} />
+        <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
         <div>
           <Title text={"GUSTAVO DOS ANJOS"} />
           <Title text={"DEV FULLSTACK"} italic />
         </div>
-        <img src='../assets/gifs/star_spinning.gif' style={{ width: "5%", height: "5%" }} />
+        <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
       </div>
       <div className='iconsContainer'>
         {
