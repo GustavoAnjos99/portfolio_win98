@@ -14,7 +14,7 @@ export const PageProjeto = (props) => {
             <img src={props.data.foto} style={{ display: imgok ? 'block' : 'none', width: props.mobile ? '20%' : '100%', border: `2px solid gray` }} onError={() => setImgOk(false)} />
             <h3>{props.nameProject}</h3>
             <p style={{ textAlign: 'justify' }}>{props.data.texto}</p>
-            <p><a href={props.data.links[0]}>Github</a> | <a href={props.data.links[1]}>Projeto</a></p>
+            <p><a href={props.data.links[0]} style={{color: props.data.links[0] == '#' ? 'gray' : ''}}>Github</a> | <a href={props.data.links[1]} style={{color: props.data.links[1] == '#' ? 'gray' : ''}}>Projeto</a></p>
             <div style={{display: 'flex', gap: '50%', justifyContent: 'center'}}>
                   <img src={folder} style={{ width: '5vw', height: '5vw' }} />
                   <img src={folder} style={{ width: '5vw', height: '5vw' }} />
@@ -61,7 +61,7 @@ export const MeusProjetos = () => {
                     tiposProjetos.map(element => {
                         return <div>
                             <h3>{element}</h3>
-                            <div style={{ display: 'flex', flexDirection: window.innerWidth < 615 ? 'row' : 'column' , gap: 2, width: '100%'}}>
+                            <div style={{ display: 'flex', flexDirection: window.innerWidth < 615 ? 'row' : 'column', gap: 2, width: window.innerWidth < 615 ? '90vw' : '100%', overflowY: 'auto'}}>
                                 {
                                     Object.keys(projetos[element]).map(element => {
                                         return <ButtonWin title={element} function={() => openProject(element, "o")} />
