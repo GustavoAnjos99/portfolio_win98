@@ -17,12 +17,20 @@ import people from './assets/icons/people.png'
 import search from './assets/icons/search.png'
 
 function App() {
-  const iconsData = [
+  const iconsDataMobile = [
+    ["15%", "80%", "Sobre mim", people],
+    ["80%", "60%", "Minhas Skills", computer],
+    ["40%", "40%", "Meus Projetos", computer_folder],
+    ["60%", "5%", "Contato", search]
+  ]
+  const iconsDataPC = [
     ["30%", "90%", "Sobre mim", people],
     ["80%", "68%", "Minhas Skills", computer],
     ["40%", "40%", "Meus Projetos", computer_folder],
     ["60%", "10%", "Contato", search]
   ]
+
+  const iconsData = window.innerWidth < 615 ? iconsDataMobile : iconsDataPC
 
   const [windows, setWindow] = useState({})
   const openCloseWindow = (title, op) => {
@@ -48,15 +56,15 @@ function App() {
 
   
   return (
-    <div>
+    <div className='containerHome'>
       <Topbar title="Gustavo dos Anjos" home />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "5vw" }}>
-        <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
+        <img src={star_spinning} style={imageStyles} />
         <div>
           <Title text={"GUSTAVO DOS ANJOS"} />
           <Title text={"DEV FULLSTACK"} italic />
         </div>
-        <img src={star_spinning} style={{ width: "5%", height: "5%" }} />
+        <img src={star_spinning} style={imageStyles} />
       </div>
       <div className='iconsContainer'>
         {
@@ -98,6 +106,11 @@ function App() {
       <p style={{ position: 'absolute', bottom: 0, left: 15 }}>Gustavo dos anjos, dev fullstack | 2025</p>
     </div>
   )
+}
+
+const imageStyles = {
+   width: window.innerWidth < 615 ? "15%" : "5%", 
+   height: window.innerWidth < 615 ? "35%" : "5%"
 }
 
 export default App

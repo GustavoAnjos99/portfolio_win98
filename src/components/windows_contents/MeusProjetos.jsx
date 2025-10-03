@@ -55,13 +55,13 @@ export const MeusProjetos = () => {
     }
 
     return (
-        <section style={sectionStyle}>
-            <div style={{ margin: 0, padding: '2%', width: '40%', background: 'white' }} className='reverse-border'>
+        <section style={ window.innerWidth < 615 ? sectionStyleMobile : sectionStyle}>
+            <div style={{ margin: 0, padding: '2%', width: window.innerWidth < 615 ? '100%': '40%', background: 'white'}} className='reverse-border'>
                 {
                     tiposProjetos.map(element => {
                         return <div>
                             <h3>{element}</h3>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: 2, width: '100%' }}>
+                            <div style={{ display: 'flex', flexDirection: window.innerWidth < 615 ? 'row' : 'column' , gap: 2, width: '100%'}}>
                                 {
                                     Object.keys(projetos[element]).map(element => {
                                         return <ButtonWin title={element} function={() => openProject(element, "o")} />
@@ -72,7 +72,7 @@ export const MeusProjetos = () => {
                     })
                 }
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', background: 'white', padding: '2%'}} className='reverse-border'>
+            <div style={{ display: 'flex', visibility:  Object.keys(project) < 1 ? 'hidden' : 'visible', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', background: 'white', padding: '2%'}} className='reverse-border'>
                 {
                     tiposProjetos.map(element => {
                         return Object.keys(projetos[element]).map(nome => {
@@ -92,5 +92,17 @@ const sectionStyle = {
     paddingInline: 20,
     margin: 0,
     justifyContent: 'space-evenly',
+    gap: '10%'
+}
+
+const sectionStyleMobile = {
+    display: 'flex',
+    flexDirection: 'column',
+    background: colors.buttonBackground,
+    paddingBlock: 25,
+    paddingInline: 20,
+    margin: 0,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
     gap: '10%'
 }

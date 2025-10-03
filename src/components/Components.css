@@ -1,5 +1,4 @@
 .buttonWinContainer {
-  z-index: 500;
   background-color: #C6C6C6;
 
   border-top: 2px solid #FFFFFF;
@@ -20,7 +19,6 @@
 }
 
 .buttonWinContainerContato{
-    z-index: 500;
   background-color: #C6C6C6;
 
   border-top: 2px solid #FFFFFF;

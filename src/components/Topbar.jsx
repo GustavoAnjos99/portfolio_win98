@@ -56,5 +56,5 @@ const blueTabStyle = {
     paddingBlock: 2,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
 }

@@ -32,7 +32,7 @@ export const Contato = () => {
                     }
                 </div>
                 <div style={{padding: '10%', display: 'flex', justifyContent: 'center'}}>
-                    <img src={world_computer} style={{ width: '10vw', height: '10vw'}} />
+                    <img src={world_computer} style={widthImgGifresponsive} />
                 </div>
             </div>
         </section>
@@ -42,4 +42,9 @@ export const Contato = () => {
 const sectionStyle = {
     background: 'white',
     margin: 5,
+}
+
+const widthImgGifresponsive = {
+    width: window.innerWidth < 615 ? '30vw' : '10vw', 
+    height: window.innerWidth < 615 ? '30vw' : '10vw'
 }

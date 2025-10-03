@@ -14,7 +14,7 @@ export const DivImagens = (props) => {
                         return null
                     } 
                     return <img src={`https://api.iconify.design/vscode-icons/file-type-${element == "Javascript" ? "js-official" : element == "PostgreSQL" ? "pgsql" : element.toLowerCase()}.svg`}
-                    style={{ width: '5vw', transform: `rotate(${Math.round(Math.random() * 10000)}deg` }}
+                    style={{ width: window.innerWidth < 615 ? '15vw' : '5vw', transform: `rotate(${Math.round(Math.random() * 10000)}deg` }}
                         onError={() => setImgOk(false)}
                     />
                 })
@@ -26,7 +26,7 @@ export const DivImagens = (props) => {
 
 export const MinhasSkills = () => {
     return (
-        <section style={sectionStyle}>
+        <section style={sectionStyle} className='reverse-border'>
             {
                 Object.keys(skills).map(element => {
                     return <div>

@@ -4,3 +4,17 @@
     height: 50vh;
     justify-self: center;
 }
+
+@media (max-width: 615px) {
+    .iconsContainer {
+        width: 90vw;
+        height: 60vh;
+    }
+    .containerHome {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 80vh;
+    }
+}

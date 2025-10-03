@@ -8,18 +8,18 @@ import sobreMimTxt from '../../assets/texts/sobre_mim/sobre_mim.txt?raw'
 
 export const SobreMim = () => {
     const [textSobreMim, setTextSobreMim] = useState([])
-    
+
     useEffect(() => {
         setTextSobreMim(sobreMimTxt.split("\n"))
-    }, []) 
+    }, [])
 
     return (
-        <section style={sectionStyle}>
+        <section style={sectionStyle} className='reverse-border'>
             <div style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', margin: 0 }}>
-                <img src={profile} style={{ width: '10vw', height: '11vw', border: `2px solid ${colors.buttonBackground}` }} />
-                <img src={computer_cd} style={{ width: '10vw', height: '10vw' }} />
+                <img src={profile} style={widthImgGifresponsive} />
+                <img src={computer_cd} style={widthImgGifresponsive} />
             </div>
-            <hr/>
+            <hr />
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 {
                     textSobreMim.map(element => {
@@ -36,4 +36,9 @@ const sectionStyle = {
     paddingBlock: 25,
     paddingInline: 50,
     margin: 5,
+}
+
+const widthImgGifresponsive = {
+    width: window.innerWidth < 615 ? '30vw' : '10vw', 
+    height: window.innerWidth < 615 ? '30vw' : '10vw'
 }
