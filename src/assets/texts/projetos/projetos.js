@@ -4,7 +4,7 @@ import barberfashion from '../../img/barberfashion.png'
 import pci from '../../img/pci.png'
 import calmo from '../../img/calmo.png'
 import predimecmanutapp from '../../img/predimecmanutapp.png'
-import cligemini from '../../img/portal360.png'
+import cligemini from '../../img/cligemini.png'
 import futsimulator from '../../img/futsimulator.png'
 
 export const projetos = {

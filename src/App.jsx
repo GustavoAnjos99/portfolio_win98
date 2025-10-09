@@ -9,25 +9,33 @@ import { SobreMim } from './components/windows_contents/SobreMim'
 import { MinhasSkills } from './components/windows_contents/MinhasSkills'
 import { MeusProjetos } from './components/windows_contents/MeusProjetos'
 import { Contato } from './components/windows_contents/Contato'
+import { ExpProfissionais } from './components/windows_contents/ExpProfissionais'
+import { FormAcademica } from './components/windows_contents/FormAcademica'
 
 import star_spinning from './assets/gifs/star_spinning.gif'
 import computer from './assets/icons/computer.png'
 import computer_folder from './assets/icons/computer_folder.png'
 import people from './assets/icons/people.png'
 import search from './assets/icons/search.png'
+import world_folder from './assets/icons/world_folder.png'
+import globe from './assets/icons/globe.png'
 
 function App() {
   const iconsDataMobile = [
     ["15%", "80%", "Sobre mim", people],
-    ["80%", "60%", "Minhas Skills", computer],
+    ["60%", "70%", "Minhas Skills", computer],
     ["40%", "40%", "Meus Projetos", computer_folder],
-    ["60%", "5%", "Contato", search]
+    ["60%", "5%",  "Contato", search],
+    ["75%", "25%", "Exp. Profissionais", world_folder],
+    ["20%", "10%", "Form. Acadêmica", globe]
   ]
   const iconsDataPC = [
-    ["30%", "90%", "Sobre mim", people],
+    ["25%", "86%", "Sobre mim", people],
     ["80%", "68%", "Minhas Skills", computer],
-    ["40%", "40%", "Meus Projetos", computer_folder],
-    ["60%", "10%", "Contato", search]
+    ["40%", "55%", "Meus Projetos", computer_folder],
+    ["50%", "5%", "Contato", search],
+    ["70%", "30%", "Exp. Profissionais", world_folder],
+    ["20%", "25%", "Form. Acadêmica", globe]
   ]
 
   const iconsData = window.innerWidth < 615 ? iconsDataMobile : iconsDataPC
@@ -61,8 +69,8 @@ function App() {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "5vw" }}>
         <img src={star_spinning} style={imageStyles} />
         <div>
-          <Title text={"GUSTAVO DOS ANJOS"} />
-          <Title text={"DEV FULLSTACK"} italic />
+          <Title text={"GUSTAVO DOS ANJOS CAMPOS"} />
+          <Title text={"Dev Fullstack"} italic subtitle/>
         </div>
         <img src={star_spinning} style={imageStyles} />
       </div>
@@ -96,14 +104,16 @@ function App() {
                   element[2] == "Sobre mim" ? <SobreMim /> :
                     element[2] == "Minhas Skills" ? <MinhasSkills /> :
                       element[2] == "Meus Projetos" ? <MeusProjetos /> :
-                        element[2] == "Contato" ? <Contato /> : null
+                        element[2] == "Contato" ? <Contato /> : 
+                          element[2] == "Exp. Profissionais" ? <ExpProfissionais/> : 
+                            element[2] == "Form. Acadêmica" ? <FormAcademica/> : null
                 }
               </Window>
             </div>
           )
         ))
       }
-      <p style={{ position: 'absolute', bottom: 0, left: 15 }}>Gustavo dos anjos, dev fullstack | 2025</p>
+      <p style={{ position: 'absolute', bottom: 0, left: 15, zIndex: -1 }}>Gustavo dos anjos, dev fullstack | 2025</p>
     </div>
   )
 }
