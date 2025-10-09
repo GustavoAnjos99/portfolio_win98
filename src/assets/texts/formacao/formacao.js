@@ -6,7 +6,7 @@ export const formacao = {
     },
     "Introdução à gestão de projetos": {
         instituicao: "Fundação Bradesco",
-        data: "2024",
-        descricao: "Curso"
+        data: "02/2024 - 03/2024",
+        descricao: "Curso | 10 horas"
     }
 }

@@ -70,7 +70,7 @@ function App() {
         <img src={star_spinning} style={imageStyles} />
         <div>
           <Title text={"GUSTAVO DOS ANJOS CAMPOS"} />
-          <Title text={"Dev Fullstack"} italic subtitle/>
+          <Title text={"Dev Fullstack"} subtitle/>
         </div>
         <img src={star_spinning} style={imageStyles} />
       </div>
