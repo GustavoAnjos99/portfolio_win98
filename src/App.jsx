@@ -19,6 +19,7 @@ import people from './assets/icons/people.png'
 import search from './assets/icons/search.png'
 import world_folder from './assets/icons/world_folder.png'
 import globe from './assets/icons/globe.png'
+import portfolio_logo from './assets/img/portfolio_logo.png'
 
 function App() {
   const iconsDataMobile = [
@@ -67,12 +68,13 @@ function App() {
     <div className='containerHome'>
       <Topbar title="Gustavo dos Anjos" home />
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: "5vw" }}>
-        <img src={star_spinning} style={imageStyles} />
+        {/* <img src={star_spinning} style={imageStyles} /> */}
         <div>
-          <Title text={"GUSTAVO DOS ANJOS CAMPOS"} />
-          <Title text={"Dev Fullstack"} subtitle/>
+          <img src={portfolio_logo} style={{width: window.innerWidth < 900 ? '80vw' : '55vw'}}/>
+          {/* <Title text={"GUSTAVO DOS ANJOS CAMPOS"} />
+          <Title text={"Dev Fullstack"} subtitle/> */}
         </div>
-        <img src={star_spinning} style={imageStyles} />
+        {/* <img src={star_spinning} style={imageStyles} /> */}
       </div>
       <div className='iconsContainer'>
         {
@@ -93,7 +95,7 @@ function App() {
       {
         iconsData.map(element => (
           windows[element[2]] && (
-            <div style={{ minWidth: 'min-content', maxWidth: window.innerWidth < 800 ? '90vw' : element[2] == 'Meus Projetos' ? '50vw' :'35vw' }}>
+            <div style={{ minWidth: 'min-content', maxWidth: window.innerWidth < 1450 ? '70vw' : window.innerWidth < 615 ? '90vw' : element[2] == 'Meus Projetos' ? '50vw' :'35vw' }}>
               <Window
                 iconTab={element[3]}
                 key={element[2]}
